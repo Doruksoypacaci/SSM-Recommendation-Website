@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Result</title>
+  </head>
+  <body>
+    <h1>OBJECT Prediction</h1>
+	    <form method="post" enctype="multipart/form-data">
+		    {% csrf_token %}
+		    <input type="file" name="sentFile" />
+		    <input type="submit" name="submit" value="Upload" />
+		</form>
+    {{ name }}
+    <p>Type: </p>
+    {{ type }}
+    <p>Time taken for loading image: </p>
+    {{ time_load_img }}
+    <p>Time taken for VGG Preprocessing: </p>
+    {{ time_vgg_preprocessing }}
+    <p>Time taken for VGG Model: </p>
+    {{ time_load_model_vgg }}
+    
+  </body>
+</html>

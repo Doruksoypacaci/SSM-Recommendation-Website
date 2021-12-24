@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+  </head>
+  <body>
+    <h1>GENRE Prediction</h1>
+	    <form method="post" enctype="multipart/form-data">
+		    {% csrf_token %}
+		    <input type="file" name="sentFile" />
+		    <input type="submit" name="submit" value="Upload" />
+		</form>
+    {{ genre }}
+    <p>Type: </p>
+    {{ type }}
+    <p>Time taken for loading image: </p>
+    {{ time_load_img }}
+    <p>Time taken for uploading Genre Model: </p>
+    {{ time_load_model_genre }}    
+    <p>Time taken for VGG Model: </p>
+    {{ time_load_model_vgg }}
+  </body>
+</html>
